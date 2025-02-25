@@ -1,0 +1,184 @@
+<ion-content [fullscreen]="true" style="--background: linear-gradient(135deg, #0f0514, #1a0f2e, #0f0514);">
+  <ion-header collapse="condense">
+    <ion-toolbar style="--background: linear-gradient(45deg, #1a0f2e, #2d1b4e, #1a0f2e);">
+      <ion-title style="font-family: 'Orbitron', sans-serif; 
+                       font-size: 20px; 
+                       color: #fff;
+                       text-align: center;
+                       text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);">SanZ NETT</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Facilities Section -->
+  <div style="margin-top: 60px;">
+    <ion-list style="background: transparent; padding: 16px;">
+      <ion-list-header style="color: #fff;
+                              font-family: 'Orbitron', sans-serif;
+                              font-size: 18px;
+                              padding: 16px 8px;">
+        <ion-icon name="wifi" style="margin-right: 8px; color: #0ff; filter: drop-shadow(0 0 2px #f0f);"></ion-icon>
+        Facilities
+      </ion-list-header>
+
+      <ion-item style="--background: transparent;
+                      margin-bottom: 8px;
+                      border-radius: 12px;
+                      border: 1px solid rgba(0, 255, 255, 0.2);">
+        <ion-icon name="desktop" slot="start" style="color: #0ff; filter: drop-shadow(0 0 2px #f0f);"></ion-icon>
+        <ion-label>
+          <h2 style="font-family: 'Orbitron', sans-serif; color: #fff;">Gaming PCs</h2>
+          <p style="font-family: 'Rajdhani', sans-serif; color: rgba(255, 255, 255, 0.6);">20 High-End Gaming Stations</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item style="--background: transparent;
+                      margin-bottom: 8px;
+                      border-radius: 12px;
+                      border: 1px solid rgba(0, 255, 255, 0.2);">
+        <ion-icon name="wifi" slot="start" style="color: #0ff; filter: drop-shadow(0 0 2px #f0f);"></ion-icon>
+        <ion-label>
+          <h2 style="font-family: 'Orbitron', sans-serif; color: #fff;">High-Speed Internet</h2>
+          <p style="font-family: 'Rajdhani', sans-serif; color: rgba(255, 255, 255, 0.6);">1Gbps Fiber Connection</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item style="--background: transparent;
+                      margin-bottom: 8px;
+                      border-radius: 12px;
+                      border: 1px solid rgba(0, 255, 255, 0.2);">
+        <ion-icon name="fast-food" slot="start" style="color: #0ff; filter: drop-shadow(0 0 2px #f0f);"></ion-icon>
+        <ion-label>
+          <h2 style="font-family: 'Orbitron', sans-serif; color: #fff;">Snack Bar</h2>
+          <p style="font-family: 'Rajdhani', sans-serif; color: rgba(255, 255, 255, 0.6);">Food & Beverages Available</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item style="--background: transparent;
+                      margin-bottom: 8px;
+                      border-radius: 12px;
+                      border: 1px solid rgba(0, 255, 255, 0.2);">
+        <ion-icon name="headset" slot="start" style="color: #0ff; filter: drop-shadow(0 0 2px #f0f);"></ion-icon>
+        <ion-label>
+          <h2 style="font-family: 'Orbitron', sans-serif; color: #fff;">Gaming Gear</h2>
+          <p style="font-family: 'Rajdhani', sans-serif; color: rgba(255, 255, 255, 0.6);">Premium Peripherals</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item style="--background: transparent;
+                      margin-bottom: 8px;
+                      border-radius: 12px;
+                      border: 1px solid rgba(0, 255, 255, 0.2);">
+        <ion-icon name="snow" slot="start" style="color: #0ff; filter: drop-shadow(0 0 2px #f0f);"></ion-icon>
+        <ion-label>
+          <h2 style="font-family: 'Orbitron', sans-serif; color: #fff;">AC Room</h2>
+          <p style="font-family: 'Rajdhani', sans-serif; color: rgba(255, 255, 255, 0.6);">Comfortable Environment</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- Quick Menu Section -->
+  <ion-list style="background: transparent; padding: 16px;">
+    <ion-list-header style="color: #fff;
+                            font-family: 'Orbitron', sans-serif;
+                            font-size: 18px;
+                            padding: 16px 8px;">
+      <ion-icon name="apps" style="margin-right: 8px; color: #0ff; filter: drop-shadow(0 0 2px #f0f);"></ion-icon>
+      Akses Cepat
+    </ion-list-header>
+
+    <div style="display: flex; justify-content: space-around; gap: 10px;">
+      <ion-item style="--background: transparent;
+                      border-radius: 12px;
+                      border: 1px solid rgba(0, 255, 255, 0.2);
+                      width: 48%;"
+               [routerLink]="['/tabs/tab4']">
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%; padding: 10px;">
+          <ion-icon name="information-circle" style="font-size: 24px; color: #0ff; filter: drop-shadow(0 0 2px #f0f);"></ion-icon>
+          <div style="font-family: 'Orbitron', sans-serif; color: #fff; margin-top: 8px;">Info Game</div>
+        </div>
+      </ion-item>
+
+      <ion-item style="--background: transparent;
+                      border-radius: 12px;
+                      border: 1px solid rgba(0, 255, 255, 0.2);
+                      width: 48%;">
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%; padding: 10px;">
+          <ion-icon name="call" style="font-size: 24px; color: #0ff; filter: drop-shadow(0 0 2px #f0f);"></ion-icon>
+          <div style="font-family: 'Orbitron', sans-serif; color: #fff; margin-top: 8px;">Hubungi</div>
+        </div>
+      </ion-item>
+    </div>
+  </ion-list>
+
+  <!-- PC Specs Section -->
+  <ion-card style="margin: 16px;
+                  background: rgba(28, 0, 36, 0.85);
+                  border-radius: 20px;
+                  border: 1px solid rgba(0, 255, 255, 0.2);">
+    <ion-card-header>
+      <ion-card-title style="font-family: 'Orbitron', sans-serif;
+                            color: #fff;
+                            text-align: center;
+                            text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);">
+        <ion-icon name="desktop" style="color: #0ff; filter: drop-shadow(0 0 2px #f0f);"></ion-icon>
+        PC SPECS
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" *ngFor="let spec of [
+            {icon: 'hardware-chip', title: 'Processor', main: 'Ryzen 7 5800X', sub: '8 Cores 16 Threads'},
+            {icon: 'gpu-chip', title: 'Graphics', main: 'RTX 3060', sub: '12GB GDDR6'},
+            {icon: 'memory', title: 'Memory', main: '32GB RAM', sub: 'DDR4 3600MHz'},
+            {icon: 'disc', title: 'Storage', main: '1TB NVMe', sub: '+ 2TB HDD'}
+          ]">
+            <div style="background: rgba(255, 255, 255, 0.05);
+                        border-radius: 14px;
+                        padding: 12px;
+                        margin: 6px;
+                        border: 1px solid rgba(0, 255, 255, 0.2);">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <ion-icon [name]="spec.icon"
+                         style="font-size: 20px;
+                                color: #0ff;
+                                filter: drop-shadow(0 0 2px #f0f);"></ion-icon>
+                <div>
+                  <div style="font-family: 'Rajdhani', sans-serif;
+                             font-size: 11px;
+                             color: rgba(255, 255, 255, 0.6);
+                             text-transform: uppercase;">{{spec.title}}</div>
+                  <div style="font-family: 'Orbitron', sans-serif;
+                             font-size: 14px;
+                             color: #fff;
+                             margin: 2px 0;
+                             text-shadow: 0 0 4px rgba(0, 255, 255, 0.2);">{{spec.main}}</div>
+                  <div style="font-family: 'Rajdhani', sans-serif;
+                             font-size: 12px;
+                             color: rgba(255, 255, 255, 0.7);">{{spec.sub}}</div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Member Button -->
+  <div style="display: flex; 
+              justify-content: center; 
+              padding: 16px;">
+    <ion-button [routerLink]="['/tabs/tab2']"
+                style="--background: linear-gradient(45deg, #0ff, #f0f);
+                       --border-radius: 25px;
+                       --padding-start: 30px;
+                       --padding-end: 30px;
+                       font-family: 'Orbitron', sans-serif;">
+      <ion-icon name="person-add-outline" slot="start"></ion-icon>
+      Member
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Registration History</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #1a1a1a;">
+  <!-- Refresh Data -->
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content  
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <!-- Registration Results Display -->
+  <ion-card *ngFor="let dataPendonor of pendonor" 
+            style="background: #2a2a2a; 
+                   margin: 16px;
+                   border-radius: 15px;
+                   border: 1px solid rgba(147, 51, 234, 0.3);
+                   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+    
+    <ion-card-header style="border-bottom: 1px solid rgba(147, 51, 234, 0.2);">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+        <ion-icon name="person-circle" 
+                  style="font-size: 32px; 
+                         color: #9333ea; 
+                         margin-right: 10px;">
+        </ion-icon>
+        <ion-card-title style="color: #9333ea; font-size: 20px;">
+          {{ dataPendonor.nama }}
+        </ion-card-title>
+      </div>
+      <ion-chip style="background: rgba(147, 51, 234, 0.1); 
+                       color: #a855f7;
+                       border: 1px solid #9333ea;">
+        <ion-icon name="game-controller"></ion-icon>
+        <ion-label>Active Member</ion-label>
+      </ion-chip>
+    </ion-card-header>
+
+    <ion-card-content style="padding: 16px;">
+      <div style="background: rgba(147, 51, 234, 0.05);
+                  border-radius: 10px;
+                  padding: 15px;">
+        
+        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+          <ion-icon name="finger-print" 
+                    style="color: #9333ea; 
+                           font-size: 20px; 
+                           margin-right: 10px;">
+          </ion-icon>
+          <div>
+            <div style="color: #888; font-size: 12px;">Member ID</div>
+            <div style="color: #ffffff;">{{ dataPendonor.nik }}</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+          <ion-icon name="trophy" 
+                    style="color: #9333ea; 
+                           font-size: 20px; 
+                           margin-right: 10px;">
+          </ion-icon>
+          <div>
+            <div style="color: #888; font-size: 12px;">Package Type</div>
+            <div style="color: #ffffff;">{{ dataPendonor.goldar }}</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+          <ion-icon name="call" 
+                    style="color: #9333ea; 
+                           font-size: 20px; 
+                           margin-right: 10px;">
+          </ion-icon>
+          <div>
+            <div style="color: #888; font-size: 12px;">Contact Number</div>
+            <div style="color: #ffffff;">{{ dataPendonor.no_hp }}</div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center;">
+          <ion-icon name="mail" 
+                    style="color: #9333ea; 
+                           font-size: 20px; 
+                           margin-right: 10px;">
+          </ion-icon>
+          <div>
+            <div style="color: #888; font-size: 12px;">Email Address</div>
+            <div style="color: #ffffff;">{{ dataPendonor.email }}</div>
+          </div>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Infinite Scroll -->
+  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

@@ -1,0 +1,348 @@
+<ion-content class="ion-padding" style="--background: #0f010d;">
+  <div style="margin-top: 60px; display: flex; justify-content: center; align-items: center; min-height: calc(100% - 80px);">
+    <ion-card class="welcome-card" style="background: rgba(59, 2, 57, 0.8);
+                                         border-radius: 20px;
+                                         margin: 16px;
+                                         padding: 20px;
+                                         max-width: 500px;
+                                         width: 100%;
+                                         border-left: 3px solid #ff00e6;
+                                         border-right: 3px solid #00fff2;
+                                         position: relative;">
+      <!-- Header Section -->
+      <div style="text-align: center; margin-bottom: 30px;">
+        <div class="glitch-container">
+          <div class="glitch-text" style="color: #ffffff;
+                                         font-family: 'Orbitron', sans-serif;
+                                         font-size: 28px;
+                                         font-weight: bold;
+                                         text-shadow: 0.05em 0 0 #ff00e6, -0.05em -0.025em 0 #00fff2;">
+            GAMING ZONE
+          </div>
+          <div style="color: #ff00e6;
+                      font-family: 'Orbitron', sans-serif;
+                      font-size: 14px;
+                      margin-top: 5px;">
+            Premium Internet Cafe
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Section -->
+      <ion-list lines="none" style="background: transparent;">
+        <!-- Gamer Tag Input -->
+        <ion-item style="--background: rgba(255, 0, 230, 0.1);
+                        margin-bottom: 15px;
+                        border-radius: 10px;">
+          <ion-input [(ngModel)]="nama" 
+                     label="Gamer Tag" 
+                     labelPlacement="floating" 
+                     placeholder="Enter your gamer name"
+                     style="--color: #ffffff;
+                            --placeholder-color: rgba(255, 255, 255, 0.5);">
+            <div slot="label" style="color: #ff00e6; display: flex; align-items: center; gap: 8px;">
+              <ion-icon name="person-outline"></ion-icon>
+              <span>Gamer Tag</span>
+            </div>
+          </ion-input>
+        </ion-item>
+
+        <!-- Member PIN Input -->
+        <ion-item style="--background: rgba(0, 255, 242, 0.1);
+                        margin-bottom: 15px;
+                        border-radius: 10px;">
+          <ion-input type="number" 
+                     [(ngModel)]="nik" 
+                     label="Member PIN" 
+                     labelPlacement="floating" 
+                     [counter]="true" 
+                     maxlength="6"
+                     placeholder="Enter 6-digit PIN"
+                     style="--color: #ffffff;
+                            --placeholder-color: rgba(255, 255, 255, 0.5);">
+            <div slot="label" style="color: #00fff2; display: flex; align-items: center; gap: 8px;">
+              <ion-icon name="key-outline"></ion-icon>
+              <span>Member PIN</span>
+            </div>
+          </ion-input>
+        </ion-item>
+
+        <!-- Gaming Package Selection -->
+        <ion-item style="--background: rgba(255, 0, 230, 0.1);
+                        margin-bottom: 15px;
+                        border-radius: 10px;">
+          <ion-select [(ngModel)]="goldar" 
+                      label="Gaming Package" 
+                      interface="action-sheet"
+                      style="width: 100%; --color: #ffffff;"
+                      cancelText="Cancel"
+                      okText="Select Package">
+            <div slot="label" style="color: #ff00e6; display: flex; align-items: center; gap: 8px;">
+              <ion-icon name="trophy-outline"></ion-icon>
+              <span>Paket Gaming</span>
+            </div>
+            
+            <ion-select-option value="VIP">ULTRA VIP - 5 Hours (Rp 28.000)</ion-select-option>
+            <ion-select-option value="PREMIUM">PREMIUM - 3 Hours (Rp 15.000)</ion-select-option>
+            <ion-select-option value="STANDAR">STANDARD - 1 Hour (Rp 6.000)</ion-select-option>
+            <ion-select-option value="HEMAT">QUICK PLAY - 30 Minutes (Rp 3.000)</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- Email Input -->
+        <ion-item style="--background: rgba(0, 255, 242, 0.1);
+                        margin-bottom: 15px;
+                        border-radius: 10px;">
+          <ion-input [(ngModel)]="email" 
+                     label="Email" 
+                     labelPlacement="floating" 
+                     placeholder="Enter your email"
+                     style="--color: #ffffff;
+                            --placeholder-color: rgba(255, 255, 255, 0.5);">
+            <div slot="label" style="color: #00fff2; display: flex; align-items: center; gap: 8px;">
+              <ion-icon name="mail-outline"></ion-icon>
+              <span>Email</span>
+            </div>
+          </ion-input>
+        </ion-item>
+
+        <!-- Phone Input -->
+        <ion-item style="--background: rgba(255, 0, 230, 0.1);
+                        margin-bottom: 15px;
+                        border-radius: 10px;">
+          <ion-input type="number" 
+                     [(ngModel)]="no_hp" 
+                     label="Phone Number" 
+                     labelPlacement="floating"
+                     placeholder="Enter your phone number"
+                     style="--color: #ffffff;
+                            --placeholder-color: rgba(255, 255, 255, 0.5);">
+            <div slot="label" style="color: #ff00e6; display: flex; align-items: center; gap: 8px;">
+              <ion-icon name="call-outline"></ion-icon>
+              <span>Phone Number</span>
+            </div>
+          </ion-input>
+        </ion-item>
+      </ion-list>
+
+      <!-- Register Button -->
+      <div class="ion-padding">
+        <ion-button expand="block" 
+                    (click)="addpendonor()"
+                    class="glitch-button"
+                    style="--background: linear-gradient(45deg, #ff00e6, #00fff2);
+                           margin: 16px 0;
+                           --border-radius: 10px;
+                           height: 48px;
+                           font-family: 'Orbitron', sans-serif;
+                           letter-spacing: 2px;
+                           position: relative;
+                           overflow: hidden;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <ion-icon name="game-controller" style="font-size: 20px;"></ion-icon>
+            START MEMBER
+            <ion-icon name="diamond" style="font-size: 20px;"></ion-icon>
+          </div>
+        </ion-button>
+      </div>
+    </ion-card>
+  </div>
+
+  <!-- Additional Content Below Registration -->
+  <div style="margin-top: 30px;">
+    <!-- Café Image -->
+    <ion-card style="background: #2a2a2a; border-radius: 20px; overflow: hidden; margin-bottom: 20px;">
+      <img src="https://i.pinimg.com/550x/44/f3/63/44f363f344eb3bc5e9c65b722ca169b8.jpg" alt="VIP Gaming Café" 
+           style="width: 100%; height: 200px; object-fit: cover;">
+      <ion-card-header>
+        <ion-card-title style="color: #9333ea; font-size: 20px;">Fasilitas gaming</ion-card-title>
+        <ion-card-subtitle style="color: #a855f7;">Pengalaman Bermain yang Nyaman</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <!-- Gaming Menu -->
+    <ion-card style="background: #2a2a2a; border-radius: 20px;">
+      <ion-card-header>
+        <ion-card-title style="color: #9333ea; font-size: 20px;">
+          <ion-icon name="restaurant-outline"></ion-icon> Menu yang tersedia 
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-list style="background: #2a2a2a;">
+        <!-- Food Section -->
+        <ion-item-divider style="--background: #2a2a2a; color: #a855f7;">
+          <ion-label>FOOD & SNACKS</ion-label>
+        </ion-item-divider>
+
+        <ion-item style="--background: #2a2a2a;">
+          <ion-label>
+            <h3 style="color: #ffffff;">indomie mie goreng</h3>
+            <p style="color: #888;">Paket Standar </p>
+          </ion-label>
+          <ion-note slot="end" style="color: #9333ea;">Rp 8.000</ion-note>
+        </ion-item>
+
+        <ion-item style="--background: #2a2a2a;">
+          <ion-label>
+            <h3 style="color: #ffffff;">French Fries</h3>
+            <p style="color: #888;">Cabe ijo & boncabe</p>
+          </ion-label>
+          <ion-note slot="end" style="color: #9333ea;">Rp 12.000</ion-note>
+        </ion-item>
+
+        <!-- Drinks Section -->
+        <ion-item-divider style="--background: #2a2a2a; color: #a855f7;">
+          <ion-label>Minuman</ion-label>
+        </ion-item-divider>
+
+        <ion-item style="--background: #2a2a2a;">
+          <ion-label>
+            <h3 style="color: #ffffff;">Kratingdeng</h3>
+            <p style="color: #888;">Melek euy</p>
+          </ion-label>
+          <ion-note slot="end" style="color: #9333ea;">Rp 12.000</ion-note>
+        </ion-item>
+
+        <ion-item style="--background: #2a2a2a;">
+          <ion-label>
+            <h3 style="color: #ffffff;">Ice Coffee</h3>
+            <p style="color: #888;">Cappucino DKK</p>
+          </ion-label>
+          <ion-note slot="end" style="color: #9333ea;">Rp 8.000</ion-note>
+        </ion-item>
+
+        <!-- Facilities Section -->
+        <ion-item-divider style="--background: #2a2a2a; color: #a855f7;">
+          <ion-label>FACILITIES</ion-label>
+        </ion-item-divider>
+
+        <ion-item style="--background: #2a2a2a;">
+          <ion-label>
+            <h3 style="color: #ffffff;">Internet Cepat Unlimited</h3>
+            <p style="color: #888;">Up to 250mb/s</p>
+          </ion-label>
+          <ion-icon name="wifi" slot="end" style="color: #9333ea;"></ion-icon>
+        </ion-item>
+
+        <ion-item style="--background: #2a2a2a;">
+          <ion-label>
+            <h3 style="color: #ffffff;">Gaming Chairs</h3>
+            <p style="color: #888;">KZZ soft etrernal</p>
+          </ion-label>
+          <ion-icon name="chair" slot="end" style="color: #9333ea;"></ion-icon>
+        </ion-item>
+
+        <ion-item style="--background: #2a2a2a;">
+          <ion-label>
+            <h3 style="color: #ffffff;">AC Room</h3>
+            <p style="color: #888;">Temperatur di kontrol</p>
+          </ion-label>
+          <ion-icon name="thermometer" slot="end" style="color: #9333ea;"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+
+    <!-- After the menu card, add this new section -->
+    <ion-card style="background: #2a2a2a; border-radius: 20px; margin-top: 20px;">
+      <ion-card-content>
+        <div style="display: flex; align-items: center; margin-bottom: 16px;">
+          <ion-icon name="information-circle" 
+                    style="font-size: 24px; color: #9333ea; margin-right: 10px;">
+          </ion-icon>
+          <h2 style="color: #9333ea; margin: 0; font-size: 18px;">Informasi Pemesanan</h2>
+        </div>
+
+        <div style="background: rgba(147, 51, 234, 0.1); 
+                    border-left: 4px solid #9333ea; 
+                    padding: 16px; 
+                    border-radius: 8px;">
+          <p style="color: #ffffff; margin: 0; font-size: 15px;">
+            <ion-icon name="checkmark-circle" 
+                      style="color: #9333ea; margin-right: 8px;">
+            </ion-icon>
+            semua menu bisa di pesan langsung di counter
+          </p>
+          <p style="color: #888; margin: 8px 0 0 24px; font-size: 14px;">
+            staf kami akan melayani dengan baik
+          </p>
+
+          <div style="margin-top: 16px;">
+            <p style="color: #ffffff; margin: 0; font-size: 15px;">
+              <ion-icon name="time" 
+                        style="color: #9333ea; margin-right: 8px;">
+              </ion-icon>
+             waktu buka 10:00 - 21:00
+            </p>
+            <p style="color: #888; margin: 8px 0 0 24px; font-size: 14px;">
+              24 jam buka
+            </p>
+          </div>
+
+          <div style="margin-top: 16px;">
+            <p style="color: #ffffff; margin: 0; font-size: 15px;">
+              <ion-icon name="card" 
+                        style="color: #9333ea; margin-right: 8px;">
+              </ion-icon>
+              Metode Pembayaran di tempat
+            </p>
+            <p style="color: #888; margin: 8px 0 0 24px; font-size: 14px;">
+              Cash dan E-money
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 16px;">
+          <ion-button fill="clear" 
+                      style="--color: #9333ea;">
+            <ion-icon name="call" slot="start"></ion-icon>
+            Hubungi kami 082276565615 jika butuh bantuan
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <style>
+    .glitch-text {
+      position: relative;
+      animation: glitch 3s infinite;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 0.05em 0 0 #ff00e6, -0.05em -0.025em 0 #00fff2; }
+      14% { text-shadow: 0.05em 0 0 #ff00e6, -0.05em -0.025em 0 #00fff2; }
+      15% { text-shadow: -0.05em -0.025em 0 #ff00e6, 0.025em 0.025em 0 #00fff2; }
+      49% { text-shadow: -0.05em -0.025em 0 #ff00e6, 0.025em 0.025em 0 #00fff2; }
+      50% { text-shadow: 0.025em 0.05em 0 #ff00e6, 0.05em 0 0 #00fff2; }
+      99% { text-shadow: 0.025em 0.05em 0 #ff00e6, 0.05em 0 0 #00fff2; }
+      100% { text-shadow: -0.025em 0 0 #ff00e6, -0.025em -0.025em 0 #00fff2; }
+    }
+
+    .glitch-button {
+      position: relative;
+    }
+
+    .glitch-button::before,
+    .glitch-button::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, #ff00e6, #00fff2);
+      z-index: -1;
+      transition: all 0.3s ease;
+    }
+
+    .glitch-button:hover::before {
+      filter: blur(5px);
+      transform: translateX(-2px);
+    }
+
+    .glitch-button:hover::after {
+      filter: blur(5px);
+      transform: translateX(2px);
+    }
+  </style>
+</ion-content>
